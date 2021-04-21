@@ -18,11 +18,12 @@ class FilterBuilder
     public function apply()
     {
         foreach ($this->filters as $name => $value) {
-            
             $normailizedName = ucfirst($name);
             $class = $this->namespace . "\\{$normailizedName}";
     
-            if (! class_exists($class)) continue;
+            if (! class_exists($class)) {
+                continue;
+            }
     
             if (strlen($value)) {
                 (new $class($this->query))->handle($value);

@@ -20,11 +20,11 @@ class MakeFilterCommand extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        if(is_null($this->option('model'))){
+        if (is_null($this->option('model'))) {
             $this->error('You must provide a model class');
             return false;
         }
-        return $rootNamespace . '\Filters\\'.$this->option('model'); 
+        return $rootNamespace . '\Filters\\'.$this->option('model');
     }
 
     protected function getOptions()
