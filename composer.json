@@ -1,0 +1,20 @@
+{
+    "name": "gkalmoukis/laravel-filters",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Gkalmoukis\\LaravelFilters\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gkalmoukis\\LaravelFilters\\LaravelFiltersServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    }
+}

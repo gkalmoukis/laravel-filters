@@ -1,0 +1,20 @@
+<?php
+
+namespace DummyNamespace;
+
+use Happyonline\LaravelFilters\FilterInterface;
+
+class DummyClass implements FilterInterface
+{
+    protected $query;
+
+    public function __construct($query)
+    {
+        $this->query = $query;
+    }
+
+    public function handle($value): void
+    {
+        // $this->query->where();
+    }
+}
