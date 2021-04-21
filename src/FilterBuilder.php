@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyonline\LaravelFilters;
+namespace Gkalmoukis\LaravelFilters;
 
 class FilterBuilder
 {
@@ -22,9 +22,7 @@ class FilterBuilder
             $normailizedName = ucfirst($name);
             $class = $this->namespace . "\\{$normailizedName}";
     
-            if (! class_exists($class)) {
-                continue;
-            }
+            if (! class_exists($class)) continue;
     
             if (strlen($value)) {
                 (new $class($this->query))->handle($value);

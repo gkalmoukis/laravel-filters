@@ -17,9 +17,9 @@ class LaravelFiltersServiceProvider extends ServiceProvider
   public function boot()
   {
     if ($this->app->runningInConsole()) {
-        $this->commands([
-            MakeFilterCommand::class
-        ]);
-      }
+      $this->commands([
+          MakeFilterCommand::class
+      ]);
+    }
   }
 }

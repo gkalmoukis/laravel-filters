@@ -1,7 +1,8 @@
 <?php
-namespace Happyonline\LaravelFilters;
+namespace Gkalmoukis\LaravelFilters;
 
 interface FilterInterface
 {
     public function handle($value): void;
+    
 }
