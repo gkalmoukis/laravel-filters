@@ -37,18 +37,14 @@ class MakeFilterCommand extends GeneratorCommand
     public function handle()
     {
         parent::handle();
-        
-        $this->doOtherOperations();
+        $this->createFilterFile();
     }
 
-    protected function doOtherOperations()
+    protected function createFilterFile()
     {
         $class = $this->qualifyClass($this->getNameInput());
-
         $path = $this->getPath($class);
-
         $content = file_get_contents($path);
-
         file_put_contents($path, $content);
     }
 }
