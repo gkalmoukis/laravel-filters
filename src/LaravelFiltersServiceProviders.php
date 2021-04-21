@@ -1,9 +1,9 @@
 <?php
 
-namespace Happyonline\LaravelFilters;
+namespace Gkalmoukis\LaravelFilters;
 
 use Illuminate\Support\ServiceProvider;
-use Happyonline\LaravelFilters\Console\MakeFilterCommand;
+use Gkalmoukis\LaravelFilters\Console\MakeFilterCommand;
 
 class LaravelFiltersServiceProvider extends ServiceProvider
 {
@@ -12,8 +12,6 @@ class LaravelFiltersServiceProvider extends ServiceProvider
     $this->app->bind('filterBuilder', function($app) {
         return new FilterBuilder();
     });
-
-    
   }
 
   public function boot()
